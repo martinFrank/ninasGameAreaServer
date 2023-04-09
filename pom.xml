@@ -53,10 +53,11 @@
 
 
         <dependency>
-            <groupId>com.github.martinfrank.games</groupId>
-            <artifactId>rpg-model</artifactId>
+            <groupId>com.github.martinfrank.ninasgame</groupId>
+            <artifactId>ninas-game-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
     <build>

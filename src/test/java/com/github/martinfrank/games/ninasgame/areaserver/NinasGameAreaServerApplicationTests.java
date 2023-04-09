@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgservice;
+package com.github.martinfrank.games.ninasgame.areaserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

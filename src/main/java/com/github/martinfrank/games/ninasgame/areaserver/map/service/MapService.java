@@ -1,6 +1,6 @@
-package com.github.martinfrank.games.rpgservice.map.service;
+package com.github.martinfrank.games.ninasgame.areaserver.map.service;
 
-import com.github.martinfrank.games.rpgservice.map.model.Map;
+import com.github.martinfrank.games.ninasgame.areaserver.map.model.Map;
 
 import java.util.List;
 

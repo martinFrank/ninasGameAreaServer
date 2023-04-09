@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgservice.queue;
+package com.github.martinfrank.games.ninasgame.areaserver.queue;
 
 import com.github.martinfrank.games.rpgmodel.map.Map;
 import org.apache.logging.log4j.LogManager;

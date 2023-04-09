@@ -1,7 +1,7 @@
-package com.github.martinfrank.games.rpgservice.map.service;
+package com.github.martinfrank.games.ninasgame.areaserver.map.service;
 
-import com.github.martinfrank.games.rpgservice.map.model.Map;
-import com.github.martinfrank.games.rpgservice.map.repository.MapRepository;
+import com.github.martinfrank.games.ninasgame.areaserver.map.repository.MapRepository;
+import com.github.martinfrank.games.ninasgame.areaserver.map.model.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.stereotype.Service;

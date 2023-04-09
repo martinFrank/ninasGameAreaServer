@@ -1,10 +1,8 @@
-package com.github.martinfrank.games.rpgservice.map.controller;
+package com.github.martinfrank.games.ninasgame.areaserver.map.controller;
 
-import com.github.martinfrank.games.rpgservice.map.model.Map;
-import com.github.martinfrank.games.rpgservice.queue.RabbitMQSender;
+import com.github.martinfrank.games.ninasgame.areaserver.map.model.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

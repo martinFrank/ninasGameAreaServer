@@ -1,11 +1,5 @@
-package com.github.martinfrank.games.rpgservice.queue;
+package com.github.martinfrank.games.ninasgame.areaserver.queue;
 
-import com.github.martinfrank.games.rpgservice.map.model.Map;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.stereotype.Component;
 //@Component
 //@RabbitListener(queues = "rabbitmq.queue", id = "listener")
 //public class RabbitMQReceiver {

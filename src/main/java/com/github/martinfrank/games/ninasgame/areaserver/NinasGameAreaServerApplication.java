@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgservice;
+package com.github.martinfrank.games.ninasgame.areaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

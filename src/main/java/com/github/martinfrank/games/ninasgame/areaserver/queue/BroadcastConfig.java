@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgservice.queue;
+package com.github.martinfrank.games.ninasgame.areaserver.queue;
 
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;

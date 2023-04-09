@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgservice.area;
+package com.github.martinfrank.games.ninasgame.areaserver.area;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.github.martinfrank.games.rpgservice.queue.BroadcastConfig.FANOUT_EXCHANGE_NAME;
-import static com.github.martinfrank.games.rpgservice.queue.BroadcastConfig.TOPIC_EXCHANGE_NAME;
+import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.FANOUT_EXCHANGE_NAME;
+import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.TOPIC_EXCHANGE_NAME;
 
 @Component
 @EnableScheduling

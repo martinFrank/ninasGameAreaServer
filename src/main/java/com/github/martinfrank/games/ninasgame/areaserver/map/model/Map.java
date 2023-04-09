@@ -1,6 +1,5 @@
-package com.github.martinfrank.games.rpgservice.map.model;
+package com.github.martinfrank.games.ninasgame.areaserver.map.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
