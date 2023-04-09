@@ -1,6 +1,6 @@
 package com.github.martinfrank.games.ninasgame.areaserver.queue;
 
-import com.github.martinfrank.games.rpgmodel.map.Map;
+import com.github.martinfrank.ninasgame.model.map.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.amqp.core.AmqpTemplate;
