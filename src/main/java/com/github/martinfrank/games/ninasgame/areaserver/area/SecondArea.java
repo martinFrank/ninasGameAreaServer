@@ -12,31 +12,31 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.FANOUT_EXCHANGE_NAME;
-import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.FANOUT_QUEUE_1_NAME;
-import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.TOPIC_EXCHANGE_NAME;
+import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.FANOUT_EXCHANGE_NAME_2;
+import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.FANOUT_QUEUE_2_NAME;
 
 @Component
 @EnableScheduling
-public class Area {
+public class SecondArea {
 
-    private static final Logger log = LoggerFactory.getLogger(Area.class);
+    private static final Logger log = LoggerFactory.getLogger(SecondArea.class);
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-    @Autowired
-    RabbitTemplate rabbitTemplate;
 
     @Autowired
     private RabbitAdmin admin;
 
+    @Autowired
+    RabbitTemplate rabbitTemplate;
 
-    @Scheduled(fixedRate = 3000)
+    @Scheduled(fixedRate = 3100)
     public void reportCurrentTime() {
 
-        admin.purgeQueue(FANOUT_QUEUE_1_NAME);
+        admin.purgeQueue(FANOUT_QUEUE_2_NAME);
 
         String now = dateFormat.format(new Date());
         log.info("The time is now {}", now);
-        rabbitTemplate.convertAndSend(FANOUT_EXCHANGE_NAME, "", "firstArea: "+now);
+
+        rabbitTemplate.convertAndSend(FANOUT_EXCHANGE_NAME_2, "", "seconarea: "+now);
     }
 
 }

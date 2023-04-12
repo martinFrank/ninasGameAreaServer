@@ -12,41 +12,31 @@ public class BroadcastConfig {
     public final static String FANOUT_QUEUE_1_NAME = "com.baeldung.spring-amqp-simple.fanout.queue1";
     public final static String FANOUT_QUEUE_2_NAME = "com.baeldung.spring-amqp-simple.fanout.queue2";
     public final static String FANOUT_EXCHANGE_NAME = "com.baeldung.spring-amqp-simple.fanout.exchange";
-
-    public final static String TOPIC_QUEUE_1_NAME = "com.baeldung.spring-amqp-simple.topic.queue1";
-    public final static String TOPIC_QUEUE_2_NAME = "com.baeldung.spring-amqp-simple.topic.queue2";
+    public final static String FANOUT_EXCHANGE_NAME_2 = "com.baeldung.spring-amqp-simple.fanout.exchange2";
     public final static String TOPIC_EXCHANGE_NAME = "com.baeldung.spring-amqp-simple.topic.exchange";
-    public static final String BINDING_PATTERN_IMPORTANT = "*.important.*";
-    public static final String BINDING_PATTERN_ERROR = "#.error";
-
-    @Bean
-    public Declarables topicBindings() {
-        Queue topicQueue1 = new Queue(TOPIC_QUEUE_1_NAME, NON_DURABLE);
-        Queue topicQueue2 = new Queue(TOPIC_QUEUE_2_NAME, NON_DURABLE);
-
-        TopicExchange topicExchange = new TopicExchange(TOPIC_EXCHANGE_NAME, NON_DURABLE, false);
-
-        return new Declarables(topicQueue1, topicQueue2, topicExchange, BindingBuilder
-                .bind(topicQueue1)
-                .to(topicExchange)
-                .with(BINDING_PATTERN_IMPORTANT), BindingBuilder
-                .bind(topicQueue2)
-                .to(topicExchange)
-                .with(BINDING_PATTERN_ERROR));
-    }
 
     @Bean
     public Declarables fanoutBindings() {
         Queue fanoutQueue1 = new Queue(FANOUT_QUEUE_1_NAME, NON_DURABLE);
+
+        FanoutExchange fanoutExchange = new FanoutExchange(FANOUT_EXCHANGE_NAME, NON_DURABLE, true);
+
+        return new Declarables(fanoutQueue1, fanoutExchange, BindingBuilder
+                .bind(fanoutQueue1)
+                .to(fanoutExchange)
+                );
+    }
+
+    @Bean
+    public Declarables fanoutBindings2() {
         Queue fanoutQueue2 = new Queue(FANOUT_QUEUE_2_NAME, NON_DURABLE);
 
-        FanoutExchange fanoutExchange = new FanoutExchange(FANOUT_EXCHANGE_NAME, NON_DURABLE, false);
+        FanoutExchange fanoutExchange2 = new FanoutExchange(FANOUT_EXCHANGE_NAME_2, NON_DURABLE, true);
 
-        return new Declarables(fanoutQueue1, fanoutQueue2, fanoutExchange, BindingBuilder
-                .bind(fanoutQueue1)
-                .to(fanoutExchange), BindingBuilder
+        return new Declarables(fanoutQueue2, fanoutExchange2, BindingBuilder
                 .bind(fanoutQueue2)
-                .to(fanoutExchange));
+                .to(fanoutExchange2)
+        );
     }
 
 }
