@@ -15,8 +15,8 @@ import java.util.Date;
 import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.FANOUT_EXCHANGE_NAME_2;
 import static com.github.martinfrank.games.ninasgame.areaserver.queue.BroadcastConfig.FANOUT_QUEUE_2_NAME;
 
-@Component
-@EnableScheduling
+//@Component
+//@EnableScheduling
 public class SecondArea {
 
     private static final Logger log = LoggerFactory.getLogger(SecondArea.class);

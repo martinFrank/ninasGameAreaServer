@@ -57,6 +57,33 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <!--http rest client -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <!-- tiled map editor -->
+        <dependency>
+            <groupId>org.mapeditor</groupId>
+            <artifactId>libtiled</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+        <!-- JAXB API -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <!-- JAXB RI -->
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.3.4</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <build>
